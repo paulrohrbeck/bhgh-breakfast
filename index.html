@@ -97,15 +97,15 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div id="intro-copy" itemscope itemtype="http://schema.org/SocialEvent">
+                <div id="intro-copy" itemscope itemtype="http://schema.org/Event">
 
                     <meta itemprop="startDate" content="2014-06-04T18:00">
 
-                    <p class="presented-by">Boys Hope Girls Hope San Francisco presents</p>
+                    <p class="presented-by"itemprop="performer" itemscope itemtype="http://schema.org/Organization" itemref="logo"><span itemprop="name">Boys Hope Girls Hope San Francisco</span> presents</p>
                     <h1 itemprop="name">Growing Hope Gala</h1>
                     <h3 class="date"><span class="glyphicon glyphicon-calendar"></span> 6 pm · Wednesday, June 4, 2014</h3>
-                    <p class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
-                        <span class="glyphicon glyphicon-map-marker"></span> The Intercontinental Hotel, <span itemprop="streetAddress">888 Howard Street</span>, <span itemprop="addressLocality">San Francisco</span>
+                    <p class="location" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span class="glyphicon glyphicon-map-marker"></span> <span itemprop="name">The Intercontinental Hotel</span>, <span itemprop="streetAddress">888 Howard Street</span>, <span itemprop="addressLocality">San Francisco</span>
                     </p>
 
                     <p><a href="#register" class="btn btn-primary btn-lg register-button">Register Now</a></p>
@@ -122,7 +122,7 @@
 
 <div id="about">
     <div class="container">
-        <img src="images/bhgh-logo.jpg" alt="BHGH Logo" id="bhgh-logo"/><br/>
+        <img src="images/bhgh-logo.jpg" alt="BHGH Logo" id="bhgh-logo" itemprop="logo" /><br/>
 
         <p>Boys Hope Girls Hope of San Francisco Bay Area is a <strong>non-profit</strong>, residential program dedicated to improving the lives of children who are academically-motivated, but whose circumstances impede their healthy development. We provide <strong>HOPE</strong>—a Home, Parenting, Opportunities and Education—to help them realize their potential. BHGH is 100% privately funded, and 87% of the funds directly support the scholars. The San Francisco affiliate now serves young men, and plans to someday offer a program for girls.</p>
     </div>
