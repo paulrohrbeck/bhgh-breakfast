@@ -1,0 +1,179 @@
+/*
+Blue: #192231
+Orange: #e77b3b
+Grey BLue: #4e5e6e
+
+*/
+
+/* Customize container */
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+    #intro .container {
+        max-width: 1170px;
+    }
+}
+
+body {
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+}
+
+/* Navigation */
+#main-nav {
+    text-align: center;
+    /*background: #e76823;*/
+}
+
+.navbar-nav {
+    float: none;
+    display: inline-block;
+}
+
+
+/* Intro */
+#intro {
+    margin:50px auto 0;
+    padding: 50px 0;
+    background: #e77b3b;
+}
+
+#intro-copy {
+    margin: 60px 30px 0;
+}
+
+#intro-copy h1, #intro-copy h2, #intro-copy h3 {
+    text-align: left;
+    color: #fff;
+}
+#intro-copy h1 {
+    font-size: 3em;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+#intro-copy .presented-by {
+    font-style: italic;
+    font-weight: 300;
+    color: #9A4918;
+}
+
+#intro-copy .date {
+    color: #9A4918;
+    font-size: 24px;
+}
+
+#intro-copy .location {
+    font-weight: 300;
+    color: #9A4918;
+    font-size: 16px;
+}
+
+.register-button{
+    border-color: #9A4918;
+    background-color: #9A4918;
+    margin: 20px 0;
+}
+
+.register-button:hover {
+    border-color: #67371A;
+    background-color: #67371A;
+}
+
+/* About */
+#about {
+    background: #fdfdfd;
+    padding:100px 0;
+    text-align: center;
+}
+#bhgh-logo {
+    width: 300px;
+    margin: 0 auto 30px;
+}
+
+/* Venue */
+#venue {
+    background: #4b607d;
+    padding:100px 0;
+    color: #ccc;
+    text-align: center;
+
+}
+
+#venue h2 {
+    color: #fff;
+}
+
+#map-canvas {
+    width: 700px;
+    height: 400px;
+    margin: 20px auto;
+}
+
+/* Sponsors */
+#sponsors {
+    color: #ccc;
+    padding:100px 0;
+    text-align: center;
+}
+
+#sponsors img {
+    max-width: 200px;
+    margin: 20px;
+}
+
+#sponsors h2, #sponsors h3 {
+    color: #444;
+}
+
+/* Sponsor Levels */
+#sponsorlevels {
+    background: #4b607d;
+    padding:100px 0;
+    text-align: center;
+    color: #ccc;
+}
+
+#sponsorlevels h2, #sponsorlevels h3 {
+    color: #fff;
+}
+
+/* Schedule */
+#schedule {
+    background: #f1f1f1;
+    padding:100px 0;
+}
+
+/* register */
+#register {
+    background: #fff;
+    padding:100px 0;
+}
+
+#register p {
+    text-align: center;
+}
+
+/* footer */
+#footer {
+    background: #333;
+    padding:20px 0 10px;
+    color:#aaa;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 0.7em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+ul {
+    text-align: left;
+}
