@@ -114,7 +114,7 @@ body {
 }
 
 #map-canvas {
-    width: 700px;
+    width: auto;
     height: 400px;
     margin: 20px auto;
 }
