@@ -15,6 +15,12 @@ Grey BLue: #4e5e6e
     }
 }
 
+@media (min-width: 768px) {
+    #main-nav .navbar-brand {
+        display: none;
+    }
+}
+
 body {
     font-size: 1.5em;
     font-family: 'Open Sans', sans-serif;
