@@ -40,7 +40,7 @@
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#venue">Venue</a></li>
                 <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="#sponsorlevels">Sponsor Levels</a></li>
+                <li><a href="#sponsorlevels">Sponsorship Levels</a></li>
                 <li><a href="#register">Register</a></li>
             </ul>
         </div><!--/.nav-collapse -->
@@ -96,12 +96,16 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div id="intro-copy">
+                <div id="intro-copy" itemscope itemtype="http://schema.org/SocialEvent">
+
+                    <meta itemprop="startDate" content="2014-06-04T18:00">
 
                     <p class="presented-by">Boys Hope Girls Hope San Francisco presents</p>
-                    <h1>Growing Hope Gala</h1>
+                    <h1 itemprop="name">Growing Hope Gala</h1>
                     <h3 class="date"><span class="glyphicon glyphicon-calendar"></span> 6 pm · Wednesday, June 4, 2014</h3>
-                    <p class="location"><span class="glyphicon glyphicon-map-marker"></span> The Intercontinental Hotel, 888 Howard Street, San Francisco</p>
+                    <p class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+                        <span class="glyphicon glyphicon-map-marker"></span> The Intercontinental Hotel, <span itemprop="streetAddress">888 Howard Street</span>, <span itemprop="addressLocality">San Francisco</span>
+                    </p>
 
                     <p><a href="#register" class="btn btn-primary btn-lg register-button">Register Now</a></p>
 
@@ -114,9 +118,10 @@
 
 </div> <!-- /intro -->
 
+
 <div id="about">
     <div class="container">
-        <img src="images/bhgh-logo.jpg" alt="" id="bhgh-logo"/><br/>
+        <img src="images/bhgh-logo.jpg" alt="BHGH Logo" id="bhgh-logo"/><br/>
 
         <p>Boys Hope Girls Hope of San Francisco Bay Area is a <strong>non-profit</strong>, residential program dedicated to improving the lives of children who are academically-motivated, but whose circumstances impede their healthy development. We provide <strong>HOPE</strong>—a Home, Parenting, Opportunities and Education—to help them realize their potential. BHGH is 100% privately funded, and 87% of the funds directly support the scholars. The San Francisco affiliate now serves young men, and plans to someday offer a program for girls.</p>
     </div>
@@ -190,44 +195,47 @@
         <h2>Sponsors</h2>
 
         <h3>Collegian</h3>
-        <div class="row">
-            <div class="col-lg-6">
+
+        <p>
                 <img src="images/sponsors/BOW%20logo.jpg" alt="" />
-                <img src="images/sponsors/cpmc%20logo.jpg" alt="" />
                 <img src="images/sponsors/YammerLogo_JPG%20(1).jpg" alt="" />
-            </div>
-            <div class="col-lg-6">
-                <ul>
-                    <li>Luis and Nancy Belmonte</li>
-                    <li>Anne Nguyen</li>
-                    <li>Paul Rohrbeck</li>
-                </ul>
-            </div>
-        </div>
+        </p>
+        <p>
+            Luis and Nancy Belmonte
+        </p>
 
         <hr/>
 
         <h3>Senior</h3>
-
+        <p></p>
         <hr/>
 
         <h3>Junior</h3>
-
+        <p></p>
         <hr/>
 
         <h3>Sophomore</h3>
+        <p><img src="images/sponsors/cpmc%20logo.jpg" alt="" /></p>
+        <hr/>
 
+        <h3>Freshmen</h3>
+        <p></p>
+
+        <hr/>
+        <h3>In-kind and volunteer services</h3>
+
+        <p>Infield Design</p>
     </div>
 </div> <!-- /sponsors -->
 
 
 <div id="sponsorlevels">
     <div class="container">
-        <h2>Sponsor Levels</h2>
+        <h2>Sponsorship Levels</h2>
 
         <div class="row">
             <div class="col-md-6">
-                <h3>Collegian - $8,000</h3>
+                <h3>Collegian - $10,000</h3>
                 <ul>
                     <li>Table of 10</li>
                     <li>2 passes for an exclusive dinner with and served by the BHGH Scholars created by our Culinary Volunteers</li>
@@ -254,6 +262,11 @@
                 <ul>
                     <li>4 tickets</li>
                     <li>Recognition on Gala signage, ad space in Gala program</li>
+                </ul>
+
+                <h3>Freshmen - $250</h3>
+                <ul>
+                    <li>1 Ticket</li>
                 </ul>
             </div>
         </div>
@@ -340,7 +353,7 @@
 
 <div id="footer">
     <div class="container">
-        <p>&copy; 2014 Boys Hope Girls Hope San Francisco. Website development sponsored by <a href="http://www.infielddesign.com">Infield Design</a>.</p>
+        <p>&copy; 2014 <a href="http://bhghsf.org/">Boys Hope Girls Hope San Francisco</a>  |  <a href="http://www.boyshopegirlshope.org/sanfrancisco/privacy.aspx">Privacy Statement</a>  |  <a href="http://www.boyshopegirlshope.org/sanfrancisco/terms.aspx">Terms Of Use</a></p>
     </div>
 </div> <!-- /footer -->
 
@@ -352,6 +365,20 @@
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530e6bcb7398181d"></script>
+<script type="text/javascript">
+    addthis.layers({
+        'theme' : 'transparent',
+        'share' : {
+            'position' : 'left',
+            'numPreferredServices' : 5
+        }
+    });
+</script>
+<!-- AddThis Smart Layers END -->
 
 </body>
 </html>
