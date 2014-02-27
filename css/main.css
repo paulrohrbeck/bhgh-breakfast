@@ -93,11 +93,11 @@ body {
 #about {
     background: #fdfdfd;
     padding:100px 0;
-    text-align: center;
 }
 #bhgh-logo {
     width: 300px;
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
+    display: block;
 }
 
 /* Venue */
@@ -106,7 +106,6 @@ body {
     padding:100px 0;
     color: #ccc;
     text-align: center;
-
 }
 
 #venue h2 {
@@ -157,10 +156,6 @@ body {
 #register {
     background: #fff;
     padding:100px 0;
-}
-
-#register p {
-    text-align: center;
 }
 
 /* footer */
