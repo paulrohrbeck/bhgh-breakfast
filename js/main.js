@@ -25,12 +25,13 @@ $(document).ready(function(){
         // change submit button:
         $('#register-submit').button('loading');
 
-        // disable inputs:
-        registerForm.find('input').attr('disabled', 'disabled');
-
         // make ajax call
         var data = registerForm.serialize();
+        console.log("registerForm:", registerForm);
         console.log("Data:", data);
+
+        // disable inputs:
+        registerForm.find('input').attr('disabled', 'disabled');
 
         $.post('register.php', data, function(response) {
 
