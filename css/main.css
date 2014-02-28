@@ -157,6 +157,10 @@ body {
     padding:100px 0;
 }
 
+.register-success-img {
+    width: 400px;
+}
+
 /* footer */
 #footer {
     background: #333;

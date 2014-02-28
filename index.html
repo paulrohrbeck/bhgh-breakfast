@@ -276,13 +276,15 @@
 
         <hr/>
 
-        <p>Please select one of the following options for registering:</p>
-        <p>
-            <a class="btn btn-primary" href="http://www.boyshopegirlshope.org" target="_blank">Pay now (online, via our payment partner)</a>
-            <span> or </span>
-            <button class="btn btn-primary" id="pay-now">Pay later (we will contact you)</button>
-        </p>
-        <p>To register by phone, please call (415) 657 9302.</p>
+        <div id="pre-register-form">
+            <p>Please select one of the following options for registering:</p>
+            <p>
+                <a class="btn btn-primary" href="http://www.boyshopegirlshope.org" target="_blank">Pay now (online, via our payment partner)</a>
+                <span> or </span>
+                <button class="btn btn-primary" id="pay-now">Pay later (we will contact you)</button>
+            </p>
+            <p>To register by phone, please call (415) 657 9302.</p>
+        </div>
 
         <form class="form-horizontal hidden" role="form" id="register-form" method="post">
 
@@ -308,44 +310,45 @@
             </div>
 
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Name</label>
+                <label for="nameInput" class="col-sm-3 control-label">Name</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Name" required>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Name" required>
                     <span class="help-block">(As it will appear on invitation/program and billing information)</span>
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                <label for="emailInput" class="col-sm-3 control-label">Email</label>
                 <div class="col-sm-9">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Email" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Address</label>
+                <label for="addressInput" class="col-sm-3 control-label">Address</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Address" required>
+                    <input type="text" class="form-control" id="addressInput" placeholder="Address" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">City/State/Zip</label>
+                <label for="cityInput" class="col-sm-3 control-label">City/State/Zip</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="City/State/Zip" required>
+                    <input type="text" class="form-control" id="cityInput" placeholder="City/State/Zip" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Daytime phone</label>
+                <label for="daytimePhoneInput" class="col-sm-3 control-label">Daytime phone</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Daytime phone">
+                    <input type="text" class="form-control" id="daytimePhoneInput" placeholder="Daytime phone">
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Evening phone</label>
+                <label for="eveningPhoneInput" class="col-sm-3 control-label">Evening phone</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Evening phone">
+                    <input type="text" class="form-control" id="eveningPhoneInput" placeholder="Evening phone">
                 </div>
             </div>
 
             <p class="text-center">
+                <input class="hidden" type="hidden" name="honeypotInput" value="" />
                 <button type="submit" class="btn btn-primary btn-lg" data-loading-text="Sending Email..." id="register-submit">Register</button>
             </p>
 
