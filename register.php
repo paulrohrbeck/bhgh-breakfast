@@ -38,7 +38,7 @@ ini_set('display_errors', '1');
  */
 
 // prepare post data:
-$data = isset($_POST['levelInput']) ? $_POST : '';
+$data = !empty($_POST['levelInput']) ? $_POST : '';
 
 // if honey pot value is set, die :) might need a little more spam protection than this some day..
 if(empty($data) || (isset($data['honeypotInput']) && !empty($data['honeypotInput']))) die();
@@ -108,6 +108,9 @@ $message = Swift_Message::newInstance()
 
 // Send the message
 $result = $mailer->send($message);
+
+// Success?
+echo json_encode(array('success' => $result));
 
 
 /**
