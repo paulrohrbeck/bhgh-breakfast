@@ -25,10 +25,8 @@ $(document).ready(function(){
         // change submit button:
         $('#register-submit').button('loading');
 
-        // make ajax call
+        // serialize data
         var data = registerForm.serialize();
-        console.log("registerForm:", registerForm);
-        console.log("Data:", data);
 
         // disable inputs:
         registerForm.find('input').attr('disabled', 'disabled');
@@ -38,9 +36,6 @@ $(document).ready(function(){
             // hide form:
             registerForm.hide();
             $('#pre-register-form').hide();
-
-            console.log("Response:", response);
-            console.log("response.success:", response.success);
 
             // show message:
             if(response.success == true){
