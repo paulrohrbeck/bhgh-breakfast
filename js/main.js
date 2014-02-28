@@ -13,4 +13,33 @@ $(document).ready(function(){
         $('#register-form').toggleClass('hidden');
     });
 
+    // register form
+    var registerForm = $('#register-form');
+    registerForm.submit(function(event){
+        event.preventDefault();
+
+        // change submit button:
+        $('#register-submit').button('loading');
+
+        // disable inputs:
+        registerForm.find('input').attr('disabled', 'disabled');
+
+        // make ajax call
+        var data = registerForm.serialize();
+        $.post('register.php', {data:data}, function (data) {
+
+            registerForm.hide();
+            registerForm.after('<p class="alert alert-success"><span class="glyphicon glyphicon-envelope"></span> Your registration was successfully sent.</p>');
+            registerForm.after('<p class="text-center"><img src="images/slideshow/2013_rayburn.jpg" alt="" /></p>');
+
+        })
+        .fail(function() {
+
+            registerForm.hide();
+            registerForm.after('<p class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> There was an error sending your registration.</p>');
+
+        });
+
+    });
+
 });

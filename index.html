@@ -196,15 +196,7 @@
         <h2><span class="glyphicon glyphicon-heart"></span> Sponsors</h2>
 
         <h3>Collegian</h3>
-
-        <p>
-                <img src="images/sponsors/BOW%20logo.jpg" alt="" />
-                <img src="images/sponsors/YammerLogo_JPG%20(1).jpg" alt="" />
-        </p>
-        <p>
-            Luis and Nancy Belmonte
-        </p>
-
+        <p></p>
         <hr/>
 
         <h3>Senior</h3>
@@ -216,16 +208,16 @@
         <hr/>
 
         <h3>Sophomore</h3>
-        <p><img src="images/sponsors/cpmc%20logo.jpg" alt="" /></p>
+        <p></p>
         <hr/>
 
         <h3>Freshmen</h3>
         <p></p>
-
         <hr/>
-        <h3>In-kind and volunteer services</h3>
 
+        <h3>In-kind and volunteer services</h3>
         <p>Infield Design</p>
+
     </div>
 </div> <!-- /sponsors -->
 
@@ -292,7 +284,7 @@
         </p>
         <p>To register by phone, please call (415) 657 9302.</p>
 
-        <form class="form-horizontal hidden" role="form" id="register-form">
+        <form class="form-horizontal hidden" role="form" id="register-form" method="post">
 
             <hr/>
             <h3>Great! Please register so we can contact you:</h3>
@@ -318,26 +310,26 @@
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-3 control-label">Name</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Name">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Name" required>
                     <span class="help-block">(As it will appear on invitation/program and billing information)</span>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
                 <div class="col-sm-9">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-3 control-label">Address</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Address">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Address" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-3 control-label">City/State/Zip</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="City/State/Zip">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="City/State/Zip" required>
                 </div>
             </div>
             <div class="form-group">
@@ -354,7 +346,7 @@
             </div>
 
             <p class="text-center">
-                <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                <button type="submit" class="btn btn-primary btn-lg" data-loading-text="Sending Email..." id="register-submit">Register</button>
             </p>
 
         </form>
