@@ -108,7 +108,7 @@ $message = Swift_Message::newInstance()
 $result = $mailer->send($message);
 
 // Success?
-echo json_encode(array('success' => $result));
+echo json_encode(array('success' => $result > 0));
 
 
 /**

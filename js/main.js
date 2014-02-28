@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     // scroll to:
-    $('.navbar a, .register-button').click(function() {
+    $('.navbar a, .register-button, #pay-now').click(function() {
         var elementClicked = $(this).attr("href");
         var destination = $(elementClicked).offset().top;
         $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-15}, 500 );
@@ -9,12 +9,12 @@ $(document).ready(function(){
     });
 
     // register button:
+    var registerForm = $('#register-form');
     $('#pay-now').click(function(){
-        $('#register-form').toggleClass('hidden');
+        registerForm.removeClass('hidden');
     });
 
-    // register form
-    var registerForm = $('#register-form');
+    // messages:
     var successMessage = '<h2>Thank you!</h2><p class="alert alert-success"><span class="glyphicon glyphicon-envelope"></span> Your registration was successfully sent.</p><p class="text-center"><img src="images/slideshow/2013_rayburn.jpg" alt=""  class="img-thumbnail register-success-img" /></p>';
     var errorMessage = '<p class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> There was an error sending your registration.</p>';
 
