@@ -38,10 +38,10 @@ ini_set('display_errors', '1');
  */
 
 // prepare post data:
-$data = isset($_POST['data']) ? $_POST['data'] : '';
+$data = isset($_POST['levelInput']) ? $_POST : '';
 
 // if honey pot value is set, die :) might need a little more spam protection than this some day..
-if(isset($data['honeypotInput']) && !empty($data['honeypotInput'])) die();
+if(empty($data) || (isset($data['honeypotInput']) && !empty($data['honeypotInput']))) die();
 
 // set up vars for the body
 $emailBody = array(
@@ -117,5 +117,5 @@ $result = $mailer->send($message);
  * @return string
  */
 function sanitize ($input) {
-    return htmlspecialchars(strip_tags($input));
+    return htmlspecialchars(strip_tags(trim($input)));
 }
