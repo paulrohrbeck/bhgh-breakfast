@@ -24,11 +24,9 @@ $emailConfig = array(
     ),
     'to' => array(
         'paul@infielddesign.com' => 'Paul Rohrbeck',
+        'anguyen@bhgh.org' => 'Anne Nguyen',
     ),
 );
-
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 
 
 /**
