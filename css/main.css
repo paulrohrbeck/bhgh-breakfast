@@ -64,6 +64,8 @@ body {
 #intro-copy .presented-by {
     font-weight: 300;
     color: #9A4918;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgba(255,255,255, 0.3);
 }
 
 #intro-copy .date {
@@ -149,6 +151,18 @@ body {
 #schedule {
     background: #f1f1f1;
     padding:100px 0;
+}
+#schedule .container {
+    position: relative;
+}
+#mayclem-photo {
+    width:200px;
+    position: absolute;
+    right: -100px;
+    -webkit-transform: rotate(5deg);
+    -moz-transform:rotate(5deg);
+    -o-transform:rotate(5deg);
+    -ms-transform:rotate(5deg);
 }
 
 /* register */
