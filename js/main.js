@@ -32,7 +32,7 @@ $(document).ready(function(){
         registerForm.find('input').attr('disabled', 'disabled');
 
         // send data to ga
-        ga('send', 'event', 'Submit', 'clicked', {
+        ga('send', 'event', 'Registration', 'submitted', {
             'hitCallback': function() {
 
                 $.post('register.php', data, function(response) {
@@ -62,6 +62,20 @@ $(document).ready(function(){
             }
         });
 
+    });
+
+    // tracking: pay now method
+    $('#pay-now-link').click(function(event){
+        event.preventDefault();
+
+        // send data to ga
+        ga('send', 'event', 'Registration', 'clicked', {
+            'hitCallback': function() {
+
+                window.location = $(this).attr("href");
+
+            }
+        });
     });
 
 });
