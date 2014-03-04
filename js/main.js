@@ -67,12 +67,13 @@ $(document).ready(function(){
     // tracking: pay now method
     $('#pay-now-link').click(function(event){
         event.preventDefault();
+        var payNowLink = $(this).attr("href");
 
         // send data to ga
         ga('send', 'event', 'Registration', 'clicked', {
             'hitCallback': function() {
 
-                window.location = $(this).attr("href");
+                window.open(payNowLink, '_blank');
 
             }
         });
