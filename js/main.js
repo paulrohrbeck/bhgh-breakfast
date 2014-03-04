@@ -31,29 +31,35 @@ $(document).ready(function(){
         // disable inputs:
         registerForm.find('input').attr('disabled', 'disabled');
 
-        $.post('register.php', data, function(response) {
+        // send data to ga
+        ga('send', 'event', 'Submit', 'clicked', {
+            'hitCallback': function() {
 
-            // hide form:
-            registerForm.hide();
-            $('#pre-register-form').hide();
+                $.post('register.php', data, function(response) {
 
-            // show message:
-            if(response.success == true){
-                registerForm.after(successMessage);
-            } else {
-                registerForm.after(errorMessage);
+                    // hide form:
+                    registerForm.hide();
+                    $('#pre-register-form').hide();
+
+                    // show message:
+                    if(response.success == true){
+                        registerForm.after(successMessage);
+                    } else {
+                        registerForm.after(errorMessage);
+                    }
+
+                }, "json")
+                    .fail(function() {
+
+                        // hide form:
+                        registerForm.hide();
+                        $('#pre-register-form').hide();
+
+                        // show error message:
+                        registerForm.after(errorMessage);
+
+                    });
             }
-
-        }, "json")
-        .fail(function() {
-
-            // hide form:
-            registerForm.hide();
-            $('#pre-register-form').hide();
-
-            // show error message:
-            registerForm.after(errorMessage);
-
         });
 
     });
