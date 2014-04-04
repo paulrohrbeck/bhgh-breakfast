@@ -102,9 +102,8 @@ body {
 }
 #bhgh-logo {
     width: 300px;
-    margin:-30px 30px 30px -100px;
+    margin:30px auto;
     display: block;
-    float: left;
 }
 
 #bhgh-logo-anet {
@@ -112,14 +111,6 @@ body {
     margin:50px auto;
     display: block;
 }
-
-@media (max-width: 768px) {
-    #bhgh-logo {
-        float:none;
-        margin: 30px auto;
-    }
-}
-
 
 /* Venue */
 #venue {
