@@ -185,6 +185,9 @@ body {
 .register-success-img {
     width: 100%;
 }
+#paynow-submit {
+    margin: 20px 0;
+}
 
 /* footer */
 #footer {
