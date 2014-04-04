@@ -107,6 +107,12 @@ body {
     float: left;
 }
 
+#bhgh-logo-anet {
+    width: 300px;
+    margin:50px auto;
+    display: block;
+}
+
 @media (max-width: 768px) {
     #bhgh-logo {
         float:none;

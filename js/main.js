@@ -19,7 +19,7 @@ $(document).ready(function(){
         registerForm.addClass('hidden');
     });
 
-    //
+    // automatically submit form
     $('#anet-form').submit();
 
     // register button:
