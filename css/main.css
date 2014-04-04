@@ -43,7 +43,13 @@ body {
 #intro {
     margin:50px auto 0;
     padding: 50px 0;
-    background: #e77b3b;
+    background: #96c22e;
+}
+
+@media (min-width: 1280px) {
+    #intro {
+        background: #96c22e url('../images/gala-bg.jpg') no-repeat top right;
+    }
 }
 
 #intro-copy {
@@ -52,42 +58,41 @@ body {
 
 #intro-copy h1, #intro-copy h2, #intro-copy h3 {
     text-align: left;
-    color: #fff;
 }
 #intro-copy h1 {
     font-size: 3em;
     font-weight: 800;
     color: #fff;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     margin: 0;
 }
 #intro-copy .presented-by {
     font-weight: 300;
-    color: #9A4918;
+    color: #4a5c28;
     font-size: 20px;
     text-shadow: 1px 1px 1px rgba(255,255,255, 0.3);
 }
 
 #intro-copy .date {
-    color: #9A4918;
+    color: #4a5c28;
     font-size: 24px;
 }
 
 #intro-copy .location {
     font-weight: 300;
-    color: #9A4918;
+    color: #4a5c28;
     font-size: 16px;
 }
 
 .register-button{
-    border-color: #9A4918;
-    background-color: #9A4918;
+    border-color: #4a5c28;
+    background-color: #4a5c28;
     margin: 20px 0;
 }
 
 .register-button:hover {
-    border-color: #67371A;
-    background-color: #67371A;
+    border-color: #2d3818;
+    background-color: #2d3818;
 }
 
 /* About */
@@ -97,9 +102,18 @@ body {
 }
 #bhgh-logo {
     width: 300px;
-    margin: 0 auto 10px;
+    margin:-30px 30px 30px -100px;
     display: block;
+    float: left;
 }
+
+@media (max-width: 768px) {
+    #bhgh-logo {
+        float:none;
+        margin: 30px auto;
+    }
+}
+
 
 /* Venue */
 #venue {

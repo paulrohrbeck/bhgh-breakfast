@@ -1,22 +1,49 @@
 $(document).ready(function(){
 
     // scroll to:
-    $('.navbar a, .register-button, #pay-now').click(function() {
-        var elementClicked = $(this).attr("href");
+    function scrollToAnchor(element){
+        var elementClicked = typeof element == 'string' ? element : element.attr("href");
         var destination = $(elementClicked).offset().top;
         $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-15}, 500 );
         return false;
+    }
+
+    $('.navbar a, .register-button, #pay-now-link, #pay-later-link').click(function() {
+        scrollToAnchor($(this));
     });
+
+    // paynow button:
+    var paynowForm = $('#paynow-form');
+    $('#pay-now-link').click(function(){
+        paynowForm.removeClass('hidden');
+        registerForm.addClass('hidden');
+    });
+
+    //
+    $('#anet-form').submit();
 
     // register button:
     var registerForm = $('#register-form');
-    $('#pay-now').click(function(){
+    $('#pay-later-link').click(function(){
         registerForm.removeClass('hidden');
+        paynowForm.addClass('hidden');
     });
 
     // messages:
     var successMessage = '<h2>Thank you!</h2><p class="alert alert-success"><span class="glyphicon glyphicon-envelope"></span> Your registration was successfully sent.</p><p class="text-center"><img src="images/slideshow/2013_rayburn.jpg" alt=""  class="img-thumbnail register-success-img" /></p>';
     var errorMessage = '<p class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> There was an error sending your registration.</p>';
+
+    // show success message when url contains (?thankyou):
+    var showSuccessMessage = window.location.search.indexOf("thankyou") != -1;
+    if(showSuccessMessage){
+
+        // hide form:
+        registerForm.hide();
+        $('#pre-register-form').hide();
+
+        registerForm.after(successMessage);
+        scrollToAnchor('#register');
+    }
 
     // submit
     registerForm.submit(function(event){

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,10 +124,9 @@
 
 <div id="about">
     <div class="container">
-        <img src="images/bhgh-logo.jpg" alt="BHGH Logo" id="bhgh-logo" itemprop="logo" /><br/>
-
+        <h2><span class="glyphicon glyphicon-info-sign"></span> About Us</h2>
         <p>Boys Hope Girls Hope San Francisco Bay Area (BHGH-SF Bay Area) is a <strong>college preparatory and life enrichment program</strong> that serves academically motivated young people in situations of significant need.  Since opening our doors in May 2000, we have helped dozens of young children—our scholars—who have the potential to succeed academically but often live in challenging situations and/or communities where the resources and attention to help them succeed are not available.</p>
-        <p>Through our Hope Academy, a community-based program, we provide academic support and enrichment through a nurturing and structured environment and consistent and comprehensive care.  This approach maximizes their chances for a successful journey to—and through—college.  Importantly, 100% of our students come from families living at or below poverty line, and all of our collegians are the very first in their families to go to college.</p>
+        <p><img src="images/bhgh-logo.jpg" alt="BHGH Logo" id="bhgh-logo" itemprop="logo" />Through our Hope Academy, a community-based program, we provide academic support and enrichment through a nurturing and structured environment and consistent and comprehensive care.  This approach maximizes their chances for a successful journey to—and through—college.  Importantly, 100% of our students come from families living at or below poverty line, and all of our collegians are the very first in their families to go to college.</p>
         <p>For more information, please visit our website at <a href="http://www.bhghsf.org">www.bhghsf.org</a>.</p>
     </div>
 </div> <!-- /about -->
@@ -144,7 +142,7 @@
         <table class="table">
             <tr>
                 <td>6:00 pm</td>
-                <td>Cocktail reception, raffle and silent auction</td>
+                <td>Cocktail reception</td>
             </tr>
             <tr>
                 <td>7:00 pm</td>
@@ -152,7 +150,7 @@
             </tr>
             <tr>
                 <td>7:45 pm</td>
-                <td>Opportunity Maker Award presentation as well as silent and live auctions </td>
+                <td>Live auctions</td>
             </tr>
             <tr>
                 <td>8:45 pm</td>
@@ -207,11 +205,13 @@
         <hr/>
 
         <h3>Senior</h3>
-        <p></p>
+        <p>Mr. and Mrs. Andrew Daecher</p>
+        <p>Mr. and Mrs. Jay Fowler, Mr. and Mrs. Sam Palmer</p>
         <hr/>
 
         <h3>Junior</h3>
-        <p></p>
+        <p><a href="http://www.sutterhealth.org/"><img src="images/sponsors/SH-CPMC-2013-notag.jpg" alt="Sutter Health"/></a></p>
+        <p>Mr. and Mrs. Arthur A. Goepp</p>
         <hr/>
 
         <h3>Sophomore</h3>
@@ -283,12 +283,42 @@
         <div id="pre-register-form">
             <p>Please select one of the following options for registering:</p>
             <p>
-                <a class="btn btn-primary" href="https://www.justgive.org/basket?acton=donate&ein=91-2002481" target="_blank" id="pay-now-link">Pay now (online, via our payment partner)</a>
+                <a class="btn btn-primary" id="pay-now-link" href="#paynow-form">Pay now (online, via our payment partner)</a>
                 <span> or </span>
-                <a class="btn btn-primary" id="pay-now" href="#register-form">Pay later (we will contact you)</a>
+                <a class="btn btn-primary" id="pay-later-link" href="#register-form">Pay later (we will contact you)</a>
             </p>
             <p>To register by phone, please call (415) 657 9302.</p>
         </div>
+
+        <form class="form-horizontal hidden" role="form" id="paynow-form" method="post" action="anet.php">
+
+            <hr/>
+            <h3>Great! Please choose a category:</h3>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Level</label>
+                <div class="col-sm-9">
+                    <div class="radio"><label><input type="radio" name="levelInput" value="10000"> Collegian Sponsor $10,000</label></div>
+                    <div class="radio"><label><input type="radio" name="levelInput" value="5000"> Senior Sponsor $5,000</label></div>
+                    <div class="radio"><label><input type="radio" name="levelInput" value="3000"> Junior Sponsor $3,000</label></div>
+                    <div class="radio"><label><input type="radio" name="levelInput" value="1500"> Sophomore Sponsor $1,500</label></div>
+                    <div class="radio"><label><input type="radio" name="levelInput" value="250"> Freshman $250</label></div>
+                    <div class="radio"><label><input type="radio" name="levelInput" value="" disabled> Under 35 or educator? Please use the other registration option so we can contact you.</label></div>
+                    <div class="radio">
+                        <div class="row">
+                            <div class="col-xs-8"><label><input type="radio" name="levelInput" value="999"> Unfortunately, I am unable to attend but would be delighted to donate a gift in honor of BHGH SF Bay Area Scholars Fund:</label></div>
+                            <div class="col-xs-4"><input type="number" class="form-control" placeholder="Amount in $" name="amountInput"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center">
+                <input class="hidden" type="hidden" name="honeypotInput" value="" />
+                <button type="submit" class="btn btn-primary btn-lg" data-loading-text="Redirecting to payment provider..." id="paynow-submit">Continue to payment provider</button>
+            </p>
+
+        </form>
 
         <form class="form-horizontal hidden" role="form" id="register-form" method="post">
 
