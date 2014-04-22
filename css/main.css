@@ -139,7 +139,8 @@ body {
 
 #sponsors img {
     max-width: 200px;
-    margin: 20px;
+    margin: 20px 30px;
+    max-height: 90px;
 }
 
 #sponsors h2, #sponsors h3 {
