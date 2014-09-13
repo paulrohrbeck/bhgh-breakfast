@@ -8,49 +8,36 @@ $(document).ready(function(){
         return false;
     }
 
-    $('.navbar a, .register-button, #pay-now-link, #pay-later-link').click(function() {
+    $('.navbar a, .rsvp-button').click(function() {
         scrollToAnchor($(this));
-    });
-
-    // paynow button:
-    var paynowForm = $('#paynow-form');
-    $('#pay-now-link').click(function(){
-        paynowForm.removeClass('hidden');
-        registerForm.addClass('hidden');
     });
 
     // automatically submit form
     $('#anet-form').submit();
 
-    // register button:
-    var registerForm = $('#register-form');
-    $('#pay-later-link').click(function(){
-        registerForm.removeClass('hidden');
-        paynowForm.addClass('hidden');
-    });
-
     // messages:
-    var successMessage = '<h2>Thank you!</h2><p class="alert alert-success"><span class="glyphicon glyphicon-envelope"></span> Your registration was successfully sent.</p><p class="text-center"><img src="images/slideshow/2013_rayburn.jpg" alt=""  class="img-thumbnail register-success-img" /></p>';
-    var errorMessage = '<p class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> There was an error sending your registration.</p>';
+    var successMessage = '<h2>Thank you!</h2><p class="alert alert-success"><span class="glyphicon glyphicon-envelope"></span> Thanks for your RSVP. See you on November 6!</p><p class="text-center"><img src="images/slideshow/2013_rayburn.jpg" alt=""  class="img-thumbnail register-success-img" /></p>';
+    var errorMessage = '<p class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> There was an error submitting your RSVP.</p>';
 
     // show success message when url contains (?thankyou):
+    /*
     var showSuccessMessage = window.location.search.indexOf("thankyou") != -1;
     if(showSuccessMessage){
 
         // hide form:
         registerForm.hide();
-        $('#pre-register-form').hide();
 
         registerForm.after(successMessage);
-        scrollToAnchor('#register');
-    }
+        scrollToAnchor('#rsvp');
+    }*/
 
     // submit
+    var registerForm = $('#rsvp-form');
     registerForm.submit(function(event){
         event.preventDefault();
 
         // change submit button:
-        $('#register-submit').button('loading');
+        $('#rsvp-submit').button('loading');
 
         // serialize data
         var data = registerForm.serialize();
@@ -59,14 +46,13 @@ $(document).ready(function(){
         registerForm.find('input').attr('disabled', 'disabled');
 
         // send data to ga
-        ga('send', 'event', 'Registration', 'submitted', {
+        ga('send', 'event', 'RSVP', 'submitted', {
             'hitCallback': function() {
 
-                $.post('register.php', data, function(response) {
+                $.post('rsvp.php', data, function(response) {
 
                     // hide form:
                     registerForm.hide();
-                    $('#pre-register-form').hide();
 
                     // show message:
                     if(response.success == true){
@@ -80,7 +66,6 @@ $(document).ready(function(){
 
                         // hide form:
                         registerForm.hide();
-                        $('#pre-register-form').hide();
 
                         // show error message:
                         registerForm.after(errorMessage);

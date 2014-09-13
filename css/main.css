@@ -43,21 +43,16 @@ body {
 #intro {
     margin:50px auto 0;
     padding: 50px 0;
-    background: #96c22e;
-}
-
-@media (min-width: 1280px) {
-    #intro {
-        background: #96c22e url('../images/gala-bg.jpg') no-repeat top right;
-    }
+    background: #e77b3b;
 }
 
 #intro-copy {
-    margin: 30px 30px 0;
+    margin: 0 20px 0;
 }
 
 #intro-copy h1, #intro-copy h2, #intro-copy h3 {
     text-align: left;
+    color: #fff;
 }
 #intro-copy h1 {
     font-size: 3em;
@@ -68,31 +63,31 @@ body {
 }
 #intro-copy .presented-by {
     font-weight: 300;
-    color: #4a5c28;
+    color: #9A4918;
     font-size: 20px;
     text-shadow: 1px 1px 1px rgba(255,255,255, 0.3);
 }
 
 #intro-copy .date {
-    color: #4a5c28;
+    color: #9A4918;
     font-size: 24px;
 }
 
 #intro-copy .location {
     font-weight: 300;
-    color: #4a5c28;
+    color: #9A4918;
     font-size: 16px;
 }
 
-.register-button{
-    border-color: #4a5c28;
-    background-color: #4a5c28;
+.rsvp-button{
+    border-color: #9A4918;
+    background-color: #9A4918;
     margin: 20px 0;
 }
 
-.register-button:hover {
-    border-color: #2d3818;
-    background-color: #2d3818;
+.rsvp-button:hover {
+    border-color: #67371A;
+    background-color: #67371A;
 }
 
 /* About */
@@ -177,9 +172,9 @@ body {
     -ms-transform:rotate(5deg);
 }
 
-/* register */
-#register {
-    background: #fff;
+/* rsvp */
+#rsvp {
+    background: #f9f9f9;
     padding:100px 0;
 }
 
@@ -188,6 +183,17 @@ body {
 }
 #paynow-submit {
     margin: 20px 30px;
+}
+
+/* donate */
+
+#donate {
+    background: #fff;
+    padding:100px 0;
+}
+
+.AuthorizeNetSeal {
+    position: absolute;
 }
 
 /* footer */
